@@ -23,9 +23,6 @@ jobs:
       - image: circleci/openjdk:11-jdk
     steps:
       - checkout
-      - run:
-          name: Install Graphiz
-          command: sudo apt-get install graphviz
       - run: |
           if [[ "$CIRCLE_TAG" != "" ]]; then
             VERSION="$(echo "$CIRCLE_TAG" | grep -Po '(?<=v).*')"
@@ -39,10 +36,12 @@ workflows:
   build-n-deploy:
     jobs:
       - build:
+          context: SonarCloud
           filters:
             tags:
               only: /.*/
       - release:
+            context: Bintray
             requires:
               - build
             filters:
