@@ -23,7 +23,7 @@
         <repository>
             <id>bintray</id>
             <name>uniqueck-asciidoctorj-extension-support-framework</name>
-            <url>https://api.bintray.com/maven/uniqueck/asciidoctorj/${project.artifactId}/;publish=1</url>
+            <url>https://api.bintray.com/maven/uniqueck/asciidoctorj/asciidoctorj-extension-support-framework/;publish=1</url>
         </repository>
     </distributionManagement>
 
