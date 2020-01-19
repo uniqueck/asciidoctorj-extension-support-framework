@@ -10,13 +10,17 @@ import java.io.File;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AbstractAsciidoctorjExtensionSupportTestHelper {
+public abstract class AbstractAsciidoctorjExtensionSupportTestHelper {
 
     @TempDir
     File tempDir;
 
     protected File getBaseDir() {
         return new File("src/test/resources");
+    }
+
+    protected File getTempDir() {
+        return tempDir;
     }
 
     private Asciidoctor asciidoctor;
@@ -52,6 +56,10 @@ public class AbstractAsciidoctorjExtensionSupportTestHelper {
 
     protected void assertTempDirectoryContainsFile(String relativeFilePath) {
         assertTrue(new File(tempDir, relativeFilePath).isFile());
+    }
+
+    protected void assertTempDirectoryDoNotContainsFile(String relativeFilePath) {
+        assertFalse(new File(tempDir, relativeFilePath).isFile());
     }
 
     protected Asciidoctor getAsciidoctor() {
