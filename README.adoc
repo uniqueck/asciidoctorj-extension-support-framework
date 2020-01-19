@@ -1,0 +1,10 @@
+:icons: font
+:version: 1.0-SNAPSHOT
+:imagesdir: doc/images
+:repo-name: asciidoctorj-extension-support-framework
+= AsciidoctorJ Extension Support Framework
+
+image:https://img.shields.io/circleci/build/github/uniqueck/{repo-name}?style=plastic[CircleCI]
+image:https://img.shields.io/badge/License-MIT-yellow.svg?style=plastic["MIT License", link="https://opensource.org/licenses/MIT"]
+image:https://api.bintray.com/packages/uniqueck/asciidoctorj/{repo-name}/images/download.svg?style=plastic[link="https://bintray.com/uniqueck/asciidoctorj/{repo-name}/_latestVersion"]
+image:https://img.shields.io/github/issues-raw/uniqueck/{repo-name}?style=plastic[GitHub issues]
