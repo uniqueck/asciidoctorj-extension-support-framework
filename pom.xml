@@ -4,9 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.uniqueck.asciidoctorj</groupId>
+    <groupId>de.uniqueck.asciidoctorj.extensions</groupId>
     <artifactId>asciidoctorj-extension-support-framework</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <name>AsciidoctorJ Extension Support Framework</name>
+    <description>Helper for writing AsciidoctorJ Extensions</description>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://github.com/uniqueck/asciidoctorj-extension-support-framework/blob/master/LICENSE</url>
+        </license>
+    </licenses>
+    <url>https://github.com/uniqueck/asciidoctorj-extension-support-framework</url>
+
     <modules>
         <module>asciidoctorj-extension-test-support</module>
         <module>asciidoctorj-extension-support</module>
