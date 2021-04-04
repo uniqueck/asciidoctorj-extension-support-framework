@@ -69,6 +69,10 @@
         <junit-jupiter.version>5.5.2</junit-jupiter.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+
+        <sonar.projectKey>uniqueck_asciidoctorj-extension-support-framework</sonar.projectKey>
+        <sonar.organization>uniqueck-github</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
 
