@@ -4,7 +4,7 @@
 :repo-name: asciidoctorj-extension-support-framework
 = AsciidoctorJ Extension Support Framework
 
-image:https://img.shields.io/circleci/build/github/uniqueck/{repo-name}?style=plastic[CircleCI]
+image:https://github.com/uniqueck/asciidoctorj-extension-support-framework/actions/workflows/ci.yaml/badge.svg?branch=master["GitHub Actions", link="https://github.com/uniqueck/asciidoctorj-extension-support-framework/actions/workflows/ci.yaml?branch=master"]
 image:https://img.shields.io/badge/License-MIT-yellow.svg?style=plastic["MIT License", link="https://opensource.org/licenses/MIT"]
-image:https://api.bintray.com/packages/uniqueck/asciidoctorj/{repo-name}/images/download.svg?style=plastic[link="https://bintray.com/uniqueck/asciidoctorj/{repo-name}/_latestVersion"]
+image:https://maven-badges.herokuapp.com/maven-central/de.uniqueck.asciidoctorj.extensions/asciidoctorj-extension-support-framework/badge.svg?style=plastic[link="https://maven-badges.herokuapp.com/maven-central/de.uniqueck.asciidoctorj.extensions/asciidoctorj-extension-support-framework"]
 image:https://img.shields.io/github/issues-raw/uniqueck/{repo-name}?style=plastic[GitHub issues]
