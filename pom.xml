@@ -73,6 +73,7 @@
         <sonar.projectKey>uniqueck_asciidoctorj-extension-support-framework</sonar.projectKey>
         <sonar.organization>uniqueck-github</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
     </properties>
 
 
