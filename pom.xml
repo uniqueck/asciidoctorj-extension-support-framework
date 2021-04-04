@@ -127,15 +127,15 @@
                     <version>3.1.1</version>
                     <executions>
                         <execution>
-                            <phase>package</phase>
+                            <id>attach-javadocs</id>
                             <goals>
                                 <goal>jar</goal>
                             </goals>
                             <configuration>
                                 <source>${maven.compiler.source}</source>
-                                <additionalJOption>-Xdoclint:none</additionalJOption>
                             </configuration>
                         </execution>
+
                     </executions>
                 </plugin>
                 <plugin>
@@ -144,9 +144,9 @@
                     <version>3.1.0</version>
                     <executions>
                         <execution>
-                            <phase>package</phase>
+                            <id>attach-sources</id>
                             <goals>
-                                <goal>jar</goal>
+                                <goal>jar-no-fork</goal>
                             </goals>
                         </execution>
                     </executions>
@@ -185,6 +185,47 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <profiles>
+        <profile>
+            <id>deploy-to-sonatype</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.7</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 
 </project>
